@@ -1,0 +1,58 @@
+//containers
+.container{
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.flex__container__center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+//text 
+.text__family__sigmar{
+    font-family: "sigmar one", sans-serif;
+}
+
+
+.text__color__lightblack {
+    color: $lightBlack;
+}
+  
+.text__color__darkgray{
+    color: $darkGray;
+}
+
+.text__color__gray {
+    color: $gray;
+
+    &:hover{
+        color: $lightGray;
+    }
+}
+
+.text__color__lightgray {
+    color: $lightGray;
+}
+
+//backgrounds
+.bg__lightblack{
+    background-color: $lightBlack;
+}
+
+.bg__darkgray{
+    background-color: $darkGray;
+}
+.bg__gray{
+    background-color: $gray;
+}
+.bg__lightgray{
+    background-color: $lightGray;
+}
+
+//fluid
+.fluid{
+    transition: all 400ms;
+}
