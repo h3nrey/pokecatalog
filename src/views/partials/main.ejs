@@ -8,7 +8,7 @@
             <div id="starredPokemons__carousel" class="fluid">
                 <% pokemons.forEach(element => { %>
                     <div class="starredPokemons__card fluid bg__gray">
-                        <img src=<%-element.sprites.other.home.front_default%> alt="" class="starredPokemons__card__cover bg__lightblack">
+                        <img src=<%-element.sprites.other["official-artwork"].front_default%> alt="" class="starredPokemons__card__cover bg__lightblack">
                         <div class="starredPokemons__info">
                             <h3 class="starredPokemons__info__name text__color_gray"><%=element.name%></h3>
                             <div class="starredPokemons__type__container">
