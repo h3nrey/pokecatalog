@@ -145,6 +145,7 @@
 .brand__container img {
   width: 2rem;
   height: 2rem;
+  margin-right: 0.5rem;
 }
 
 .brand__container h1.brand__name {
@@ -322,6 +323,10 @@ main.flex__container__center {
   color: #33b9ee;
 }
 
+.ice {
+  color: #90dfff;
+}
+
 .ground {
   color: #6e3e0f;
 }
@@ -360,5 +365,24 @@ main.flex__container__center {
 
 .normal {
   color: #e9e8e8;
+}
+
+footer#footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer#footer #license__container {
+  font-family: "system-ui";
+}
+
+footer#footer #social a {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+
+footer#footer #social a i:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 /*# sourceMappingURL=styles.css.map */

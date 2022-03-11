@@ -1,0 +1,23 @@
+footer#footer{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    
+    #license__container{
+        font-family: "system-ui";
+    }
+
+    #social{
+        a{
+            font-size: 2rem;
+            margin-left: 0.5rem;
+
+            i{
+
+                &:hover{
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
+}

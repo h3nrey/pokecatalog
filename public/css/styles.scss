@@ -9,6 +9,7 @@ $fire: #fd9218;
 $grass: #2ce287;
 $electric: #f5e020;
 $water: #33b9ee;
+$ice: #90dfff;
 $ground: #6e3e0f;
 $rock: #33290e;
 $fairy: #f9d5ff;
@@ -20,8 +21,11 @@ $flying: #dde8fd;
 $fighting: #f0dbb3;
 $normal: #e9e8e8;
 
+
+//imports
 @import "global";
 @import "usualClasses";
 @import "header";
 @import "main";
 @import "types";
+@import "footer";
