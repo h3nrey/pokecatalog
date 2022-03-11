@@ -1,0 +1,29 @@
+<main class="container flex__container__center bg__lightblack ">
+    <h2 class="section-legend text__color__gray">Pokemons em destaques</h2>
+    <section id="starredPokemons" class="flex__container__center">
+
+        <button class="starredPokemons__buttons borderless text__color__gray" id="button__previous"> < </button>
+        
+        <div id="starredPokemons__carousel__container">
+            <div id="starredPokemons__carousel" class="fluid">
+                <% pokemons.forEach(element => { %>
+                    <div class="starredPokemons__card fluid bg__gray">
+                        <img src=<%-element.sprites.other.home.front_default%> alt="" class="starredPokemons__card__cover bg__lightblack">
+                        <div class="starredPokemons__info">
+                            <h3 class="starredPokemons__info__name text__color_gray"><%=element.name%></h3>
+                            <div class="starredPokemons__type__container">
+                                <% element.types.forEach(element => { %>
+                                    <div class="starredPokemons__type <%-element.type.name%> bg__lightblack">
+                                        <p class="text__family__sigmar"><%-element.type.name%></p>
+                                    </div>
+                                <% }) %>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        
+        </div>
+        <button class="starredPokemons__buttons borderless text__color__gray" id="button__next"> > </button>
+    </section>
+</main>

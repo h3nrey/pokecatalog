@@ -4,6 +4,24 @@ $lightGray: #dfdfdf;
 $gray: #9f9f9f;
 $darkGray: #606060;
 
+//types Color
+$fire: #fd9218;
+$grass: #2ce287;
+$electric: #f5e020;
+$water: #33b9ee;
+$ground: #6e3e0f;
+$rock: #33290e;
+$fairy: #f9d5ff;
+$poison: #481455;
+$bug: #f8d5a3;
+$dragon: #97b3e6;
+$psychic: #bd42ce;
+$flying: #dde8fd;
+$fighting: #f0dbb3;
+$normal: #e9e8e8;
+
 @import "global";
 @import "usualClasses";
 @import "header";
+@import "main";
+@import "types";

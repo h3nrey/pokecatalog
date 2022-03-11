@@ -12,9 +12,11 @@ app.use("/assets", express.static(__dirname + "public/assets"));
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
-//listen port
-app.get("/", (req,res) => {
-    res.render("index");
-})
+app.use(express.urlencoded({ extended : true }))
 
+const pokelistRoute = require("./src/routes/pokelist");
+
+app.use("/", pokelistRoute);
+
+//listen port
 app.listen(port, () => console.log(`listening to ${port}`));
