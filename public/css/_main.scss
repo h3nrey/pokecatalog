@@ -6,6 +6,12 @@ main.flex__container__center{
     max-height: 56.5rem;
     height: 87.3vh;
     justify-content: start;
+
+    h2.section__legend{
+        &:hover{
+            color: $gray;
+        }
+    }
 }
 
 #starredPokemons{
@@ -20,12 +26,17 @@ main.flex__container__center{
         cursor:pointer;
         line-height: 50%;
         background-color: rgba(240, 248, 255, 0);
+
+        &:hover{
+            transform: scale(1.1);
+            text-shadow: -10px 0 10px $black
+        }
     }
 }
 
 #starredPokemons__carousel__container {
     width: 400px;
-    height: 600px;
+    height: 400px;
     perspective: 1000px;
     position: relative;
 }
@@ -38,6 +49,7 @@ main.flex__container__center{
 }
 
 .starredPokemons__card{
+    opacity: 0.5;
     position: absolute;
     width: 14.8rem;
     height: 20rem;
@@ -91,6 +103,10 @@ main.flex__container__center{
             }
         }
     }
+}
+
+.starredPokemons__card.card__visible{
+    opacity: 1;
 }
 
 .starred-pokemons-card:nth-child(1) { transform: rotateY(  0deg) translateZ(325px); }

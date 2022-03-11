@@ -5,6 +5,10 @@
           box-sizing: border-box;
   font-family: "orbitron", sans-serif;
   text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .container {
@@ -169,6 +173,10 @@ main.flex__container__center {
           justify-content: start;
 }
 
+main.flex__container__center h2.section__legend:hover {
+  color: #9f9f9f;
+}
+
 #starredPokemons {
   width: 100%;
   height: 100%;
@@ -184,9 +192,15 @@ main.flex__container__center {
   background-color: rgba(240, 248, 255, 0);
 }
 
+#starredPokemons .starredPokemons__buttons:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  text-shadow: -10px 0 10px #000000;
+}
+
 #starredPokemons__carousel__container {
   width: 400px;
-  height: 600px;
+  height: 400px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
   position: relative;
@@ -203,6 +217,7 @@ main.flex__container__center {
 }
 
 .starredPokemons__card {
+  opacity: 0.5;
   position: absolute;
   width: 14.8rem;
   height: 20rem;
@@ -260,6 +275,10 @@ main.flex__container__center {
   font-weight: 300;
   font-size: 0.8rem;
   text-align: center;
+}
+
+.starredPokemons__card.card__visible {
+  opacity: 1;
 }
 
 .starred-pokemons-card:nth-child(1) {
@@ -328,11 +347,11 @@ main.flex__container__center {
 }
 
 .ground {
-  color: #6e3e0f;
+  color: #7e4e1e;
 }
 
 .rock {
-  color: #33290e;
+  color: #493913;
 }
 
 .fairy {
@@ -344,15 +363,15 @@ main.flex__container__center {
 }
 
 .bug {
-  color: #f8d5a3;
+  color: #A8B820;
 }
 
 .dragon {
-  color: #97b3e6;
+  color: #69316e;
 }
 
 .psychic {
-  color: #bd42ce;
+  color: #c437d6;
 }
 
 .flying {
@@ -360,11 +379,23 @@ main.flex__container__center {
 }
 
 .fighting {
-  color: #f0dbb3;
+  color: #e03517;
 }
 
 .normal {
-  color: #e9e8e8;
+  color: #A8A878;
+}
+
+.ghost {
+  color: #705898;
+}
+
+.steel {
+  color: #a8a8a8;
+}
+
+.dark {
+  color: #383227;
 }
 
 footer#footer {
@@ -382,7 +413,7 @@ footer#footer #social a {
 }
 
 footer#footer #social a i:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 /*# sourceMappingURL=styles.css.map */
