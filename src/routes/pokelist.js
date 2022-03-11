@@ -8,7 +8,8 @@ pokelistRouter.get("", async(req,res) => {
         var pokemons = []
         const fetchPokemons = async () => {
             for (let i = 1; i <= 9; i++) {
-                await getPokemon(i);
+                const randomIndex = Math.floor(Math.random() * 300)
+                await getPokemon(randomIndex);
             }
             res.render("index", {starredPokemons: pokemons})
         };
