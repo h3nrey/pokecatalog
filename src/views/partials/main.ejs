@@ -1,29 +1,56 @@
-<main class="container flex__container__center bg__lightblack ">
-    <h2 class="section__legend text__color__gray">Pokemons em destaques</h2>
-    <section id="starredPokemons" class="flex__container__center">
-
-        <button class="starredPokemons__buttons borderless text__color__gray fluid" id="button__previous"> < </button>
-        
-        <div id="starredPokemons__carousel__container">
-            <div id="starredPokemons__carousel" class="fluid">
-                <% pokemons.forEach(element => { %>
-                    <div class="starredPokemons__card fluid bg__gray">
-                        <img src=<%-element.sprites.other["official-artwork"].front_default%> alt="" class="starredPokemons__card__cover bg__lightblack">
-                        <div class="starredPokemons__info">
-                            <h3 class="starredPokemons__info__name text__color_gray"><%=element.name%></h3>
-                            <div class="starredPokemons__type__container">
+<main class="flex__container__center bg__lightblack ">
+    <section id="starredPokemons" class=" container">        
+        <h2 class="section__legend text__color__gray">Pokemons em destaques</h2>
+        <div class="flex__container__center">
+            <button class="starredPokemons__buttons borderless text__color__gray fluid" id="button__previous"> < </button>
+            <div id="starredPokemons__carousel__container">
+                <div id="starredPokemons__carousel" class="fluid">
+                    <% starredPokemons.forEach(element => { %>
+                        <div class="starredPokemons__card fluid bg__gray">
+                            <img src=<%-element.sprites.other["official-artwork"].front_default%> alt="" class="starredPokemons__card__cover bg__lightblack">
+                            <div class="starredPokemons__info">
+                                <h3 class="starredPokemons__info__name text__color_gray"><%=element.name%></h3>
+                                <div class="starredPokemons__type__container">
+                                    <% element.types.forEach(element => { %>
+                                        <div class="starredPokemons__type <%-element.type.name%> bg__lightblack">
+                                            <p class="text__family__sigmar"><%-element.type.name%></p>
+                                        </div>
+                                    <% }) %>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+            
+            </div>
+            <button class="starredPokemons__buttons borderless text__color__gray fluid" id="button__next"> > </button>
+        </div>
+    </section>
+    <section id="pokedex">
+        <div id="pokedex__container" class="bg__gray flex__container__center">
+            <h2 class="section__legend">Pokedex</h2>
+            <div id="pokedex__grid">
+                <% pokedex.forEach(element => { %>
+                    <%var image = element.sprites.other["official-artwork"].front_default%>
+                    <div class="pokedex__card rounded bg__darkgray fluid" >
+                        
+                        <div class="pokedex__card__cover fluid bg__lightblack" style="background-image: url(<%=image%> );"></div>
+                        
+                        <div class="pokedex__card__info">
+                            <h3 class="pokedex__card__info__name text__color_gray"><%=element.name%></h3>
+                            <div class="pokedex__type__container">
                                 <% element.types.forEach(element => { %>
-                                    <div class="starredPokemons__type <%-element.type.name%> bg__lightblack">
+                                    <div class="pokedex__type rounded <%-element.type.name%> bg__lightblack">
                                         <p class="text__family__sigmar"><%-element.type.name%></p>
                                     </div>
                                 <% }) %>
                             </div>
                         </div>
                     </div>
+                    
                 <% }) %>
             </div>
-        
         </div>
-        <button class="starredPokemons__buttons borderless text__color__gray fluid" id="button__next"> > </button>
     </section>
+
 </main>

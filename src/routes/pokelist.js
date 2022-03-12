@@ -11,7 +11,7 @@ pokelistRouter.get("", async(req,res) => {
                 const randomIndex = Math.floor(Math.random() * 300)
                 await getPokemon(randomIndex);
             }
-            res.render("index", {starredPokemons: pokemons})
+            res.render("index", {starredPokemons: pokemons, pokedex: pokemons})
         };
         
         const getPokemon = async id => {
