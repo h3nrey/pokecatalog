@@ -26,7 +26,6 @@ function rotateCarousel() {
       rotateIndex += 9;
     }
 
-    console.log(`selectedIndex:${selectedIndex}, rotateIndex:${rotateIndex}`)
     if(index != rotateIndex)
     element.classList.remove("card__visible");
     else {

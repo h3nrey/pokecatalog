@@ -12,7 +12,7 @@ pokelistRouter.get("", async(req,res) => {
         const fetchPokemons = async () => {
 
             for (let i = 1; i <= 9; i++) {
-                const randomIndex = Math.floor(Math.random() * 300)
+                const randomIndex = Math.floor(Math.random() * 898)
                 await getPokemon(randomIndex, pokemons.starredPokemons);
             }
 

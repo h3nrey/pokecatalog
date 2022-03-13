@@ -7,17 +7,17 @@ var starredPokemonsHeight = document.querySelector("section#starredPokemons").of
 var pokemons = [];
 
 const fetchPokemons = async() => {
-    const queryOffset = document.querySelectorAll(".pokedex__card").length;
-    for (let i = queryOffset; i <= queryOffset + 20; i++) {
+    const queryOffset = document.querySelectorAll(".pokedex__card").length + 1;
+
+    for (let i = queryOffset; i <= queryOffset + 19; i++) {
         await getPokemons(i, pokemons);
     }
-
-    console.log(pokemons);
 }
 
 const getPokemons = async (id,arr) => {
     const pokeAPI = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     const pokemon = await pokeAPI.json();
+    console.log(id);
     createCard(await pokemon);
 };
 
@@ -33,10 +33,6 @@ document.addEventListener('scroll', function(e) {
 	}
 })
 
-
-function populateGrid() {
-
-}
 
 function createCard(pokemon){
     const image = pokemon.sprites.other["official-artwork"].front_default;
