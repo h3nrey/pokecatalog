@@ -65,5 +65,19 @@
 
 //rouded
 .rounded{
+    border-radius: 1rem;
+}
 
+//body container
+.body__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+
+//height & width
+.height__full {
+    height: 100%;
 }

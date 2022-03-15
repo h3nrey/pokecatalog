@@ -2,9 +2,9 @@
     <%- include ("./brand") %> 
     <nav class="flex__container__center">
         <a href="#pokedex" class="text__family__sigmar  text__color__gray fluid">Pokedex</a>
-        <form action="" id="search-form" class="flex__container__center">
-            <input id="search__input" class="bg__lightgray fluid" type="text" placeholder="Search" required>
-            <button id="search__button" type="submit" class="fa-solid fa-magnifying-glass text__color__gray"></button>
+        <form action="/" method="post" id="search-form" class="flex__container__center">
+            <input id="search__input" name="search" class="bg__lightgray fluid" type="text" placeholder="Search" required>
+            <button id="search__button" value="search" type="submit" class="fa-solid fa-magnifying-glass text__color__gray"></button>
         </form>
     </nav>
 </header>

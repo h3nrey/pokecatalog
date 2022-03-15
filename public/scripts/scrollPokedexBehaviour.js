@@ -29,7 +29,7 @@ document.addEventListener('scroll', function(e) {
     var clientHeight = document.documentElement.clientHeight;
 
 	if( (scrollTop + clientHeight) > (scrollHeight - 5)){
-		setTimeout(fetchPokemons,1000);
+		// setTimeout(fetchPokemons,1000);
 	}
 })
 

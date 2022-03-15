@@ -1,0 +1,144 @@
+@media (max-width:1000px){
+    .brand__container{
+        img{
+            width: 1.9rem;
+            height: 1.9rem;
+            margin-right: 0.5rem;
+        }
+    
+        h1.brand__name {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media (max-width:860px){
+    .brand__container{
+        img{
+            width: 1.7rem;
+            height: 1.7rem;
+            margin-right: 0.5rem;
+        }
+    
+        h1.brand__name {
+            font-size: 1.5rem;
+        }
+    }
+
+    #header nav a{
+        font-size: 1rem;
+    }
+
+    section#pokedex div#pokedex__container #pokedex__grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width:660px){
+    .brand__container{
+        img{
+            width: 1.7rem;
+            height: 1.7rem;
+            margin-right: 0.5rem;
+        }
+    
+        h1.brand__name {
+            font-size: 1.5rem;
+        }
+    }
+
+    #header nav a{
+        font-size: 1rem;
+    }
+
+    section#pokedex div#pokedex__container #pokedex__grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:450px){
+    .brand__container{
+        img{
+            width: 1.7rem;
+            height: 1.7rem;
+            margin-right: 0.5rem;
+        }
+    
+        h1.brand__name {
+            font-size: 1.5rem;
+        }
+    }
+
+    #header{
+        clip-path: none;
+        nav {
+            display: none;
+            a{
+                font-size: 1rem;
+            }       
+        }       
+    }
+
+    main#main{
+        overflow-x: hidden;
+    }
+    
+    #starredPokemons {
+        h2.section__legend{
+            font-size: 1.2rem;
+        }
+        .starredPokemons__buttons{
+            font-size: 4.75rem;
+        }
+        .starredPokemons__card {
+            height: 14rem;
+            width: 9.8rem;
+            .starredPokemons__card__cover{
+                height: 65%;
+            }
+    
+            .starredPokemons__info .starredPokemons__type__container .starredPokemons__type p {
+                font-size: 0.6rem;
+            }
+        }
+
+    }
+
+
+    //pokedex
+    section#pokedex div#pokedex__container {
+        #pokedex__grid{
+            grid-template-columns: 1fr;
+
+            .pokedex__card {
+                
+                .pokedex__card__cover{
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                
+                .pokedex__card__info {
+
+                    .pokedex__card__info__name{
+                        font-size: 1.8rem;
+                    }
+                }
+            }            
+        }
+
+    }
+
+    footer#footer {
+        height: 13rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        flex-direction: column;
+        align-items: space-between;
+        #license__container{
+            text-align: center;
+        }
+    }
+
+        
+}

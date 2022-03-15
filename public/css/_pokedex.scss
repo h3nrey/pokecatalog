@@ -38,6 +38,13 @@ section#pokedex{
                         background-blend-mode: hard-light;  
                         background-size: contain;                
                     }
+
+                    .pokedex__card__info{
+
+                        h3.pokedex__card__info__name{
+                            color: $lightGray !important;
+                        }
+                    }
                 }
                 .pokedex__card__cover{
                     width: 100%;
