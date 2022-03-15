@@ -81,5 +81,27 @@ section#pokedex{
                 }
             }
         }
+
+        button#pokedex__button{
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            width: 20%;
+            height: 2.2rem;
+
+            &:hover{
+                background-color: darken($color: $darkGray, $amount: 10%);
+                transform: scale(1.1);
+            }
+
+            &:active{
+                transform: scale(0.9);
+            }
+        }
+
+        button#pokedex__button.disabled{
+            display: none;
+        }
+        
     }
 }

@@ -1,36 +1,43 @@
-var mainHeight = document.querySelector("main").offsetHeight;
-var headerHeight = document.querySelector("header").offsetHeight;
-var starredPokemonsHeight = document.querySelector("section#starredPokemons").offsetHeight;
-
-
-
+var canScroll = false;
+let indexLog = []
 var pokemons = [];
 
 const fetchPokemons = async() => {
     const queryOffset = document.querySelectorAll(".pokedex__card").length + 1;
 
     for (let i = queryOffset; i <= queryOffset + 19; i++) {
-        await getPokemons(i, pokemons);
+        await getPokemons(i, pokemons);       
     }
 }
 
 const getPokemons = async (id,arr) => {
-    const pokeAPI = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-    const pokemon = await pokeAPI.json();
-    console.log(id);
-    createCard(await pokemon);
-};
-
+    if (indexLog[id] != id) {
+        const pokeAPI = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+        const pokemon = await pokeAPI.json();
+        createCard(await pokemon);
+    };
+    indexLog.push(id);
+    console.log(indexLog[id]);
+}
 
 
 document.addEventListener('scroll', function(e) {
-    var scrollHeight = document.documentElement.scrollHeight;
-    var scrollTop = document.documentElement.scrollTop;
-    var clientHeight = document.documentElement.clientHeight;
+    if(canScroll) {
+        var scrollHeight = document.documentElement.scrollHeight;
+        var scrollTop = document.documentElement.scrollTop;
+        var clientHeight = document.documentElement.clientHeight;
 
-	if( (scrollTop + clientHeight) > (scrollHeight - 5)){
-		// setTimeout(fetchPokemons,1000);
-	}
+        if( (scrollTop + clientHeight) > (scrollHeight - 5)){
+            setTimeout(fetchPokemons,1000);
+        }
+    }
+})
+
+const btnLoadMore = document.querySelector("button#pokedex__button")
+btnLoadMore.addEventListener("click", () => {
+    btnLoadMore.classList.add("disabled");
+    setTimeout(fetchPokemons,1000);
+    canScroll = true;
 })
 
 

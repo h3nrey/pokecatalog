@@ -444,6 +444,29 @@ section#pokedex div#pokedex__container #pokedex__grid .pokedex__card .pokedex__c
   text-align: center;
 }
 
+section#pokedex div#pokedex__container button#pokedex__button {
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 20%;
+  height: 2.2rem;
+}
+
+section#pokedex div#pokedex__container button#pokedex__button:hover {
+  background-color: #474747;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+section#pokedex div#pokedex__container button#pokedex__button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+section#pokedex div#pokedex__container button#pokedex__button.disabled {
+  display: none;
+}
+
 .fire {
   color: #fd9218;
 }
