@@ -33,7 +33,14 @@
                 <% pokedex.forEach(element => { %>
                     <%var image = element.sprites.other["official-artwork"].front_default%>
                     <div class="pokedex__card rounded bg__darkgray fluid" >
-                        
+                        <% if (element.id < 10) { %>
+                            <div class="pokemon__index text__color__lightblack bg__gray">00<%-element.id%></div>                         
+                        <% } else if(element.id < 100) {%>
+                            <div class="pokemon__index text__color__lightblack bg__gray">0<%-element.id%></div>
+                        <%} else {%>
+                            <div class="pokemon__index text__color__lightblack bg__gray"><%-element.id%></div>
+                        <%}%>
+
                         <div class="pokedex__card__cover fluid bg__lightblack" style="background-image: url(<%=image%> );"></div>
                         
                         <div class="pokedex__card__info">

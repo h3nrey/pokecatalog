@@ -111,6 +111,10 @@
           clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%, 59% 83%, 41% 83%, 40% 100%, 0 100%);
 }
 
+#header #menu__button {
+  display: hidden;
+}
+
 #header nav a {
   font-size: 1.5rem;
   position: relative;
@@ -155,7 +159,7 @@
   background-color: rgba(255, 0, 0, 0.014);
   -webkit-clip-path: polygon(81% 0, 100% 18%, 100% 100%, 0 100%, 0 0);
           clip-path: polygon(81% 0, 100% 18%, 100% 100%, 0 100%, 0 0);
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
@@ -391,6 +395,7 @@ section#pokedex div#pokedex__container #pokedex__grid .pokedex__card {
   border-radius: 1rem;
   cursor: pointer;
   overflow: hidden;
+  position: relative;
 }
 
 section#pokedex div#pokedex__container #pokedex__grid .pokedex__card:hover {
@@ -405,6 +410,19 @@ section#pokedex div#pokedex__container #pokedex__grid .pokedex__card:hover .poke
 
 section#pokedex div#pokedex__container #pokedex__grid .pokedex__card:hover .pokedex__card__info h3.pokedex__card__info__name {
   color: #dfdfdf !important;
+}
+
+section#pokedex div#pokedex__container #pokedex__grid .pokedex__card .pokemon__index {
+  width: 3rem;
+  height: 1.5rem;
+  position: absolute;
+  z-index: 2;
+  top: 5%;
+  left: 70%;
+  text-align: center;
+  -webkit-clip-path: polygon(0 0, 90% 0, 100% 15%, 100% 100%, 12% 100%, 0 88%);
+          clip-path: polygon(0 0, 90% 0, 100% 15%, 100% 100%, 12% 100%, 0 88%);
+  font-size: 0.9rem;
 }
 
 section#pokedex div#pokedex__container #pokedex__grid .pokedex__card .pokedex__card__cover {
@@ -449,7 +467,7 @@ section#pokedex div#pokedex__container button#pokedex__button {
   border-radius: 0.5rem;
   cursor: pointer;
   width: 20%;
-  height: 2.2rem;
+  height: 2.4rem;
 }
 
 section#pokedex div#pokedex__container button#pokedex__button:hover {
@@ -680,6 +698,9 @@ footer#footer #social a i:hover {
   .brand__container h1.brand__name {
     font-size: 1.8rem;
   }
+  section#pokedex div#pokedex__container #pokedex__grid .pokedex__card .pokedex__card__info .pokedex__card__info__name {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 860px) {
@@ -725,17 +746,35 @@ footer#footer #social a i:hover {
     margin-right: 0.5rem;
   }
   .brand__container h1.brand__name {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
   #header {
     -webkit-clip-path: none;
             clip-path: none;
   }
+  #header #menu__button {
+    display: block;
+  }
   #header nav {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #header nav a {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+  #header nav form {
+    margin-left: 0.5rem;
+  }
+  #header nav.visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    background-color: black;
+  }
+  #header .brand__container.visible {
+    width: 0;
   }
   main#main {
     overflow-x: hidden;
@@ -767,6 +806,11 @@ footer#footer #social a i:hover {
   }
   section#pokedex div#pokedex__container #pokedex__grid .pokedex__card .pokedex__card__info .pokedex__card__info__name {
     font-size: 1.8rem;
+  }
+  section#pokedex div#pokedex__container button#pokedex__button {
+    border-radius: 0.5rem;
+    width: 8rem;
+    padding: 0.5rem;
   }
   footer#footer {
     height: 13rem;

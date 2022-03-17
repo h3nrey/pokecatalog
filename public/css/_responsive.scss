@@ -10,6 +10,9 @@
             font-size: 1.8rem;
         }
     }
+    section#pokedex div#pokedex__container #pokedex__grid .pokedex__card .pokedex__card__info .pokedex__card__info__name{
+        font-size: 1.8rem;
+    }
 }
 
 @media (max-width:860px){
@@ -32,6 +35,7 @@
     section#pokedex div#pokedex__container #pokedex__grid{
         grid-template-columns: 1fr 1fr 1fr;
     }
+
 }
 
 @media (max-width:660px){
@@ -65,18 +69,35 @@
         }
     
         h1.brand__name {
-            font-size: 1.5rem;
+            font-size: 1.1rem;
         }
     }
 
     #header{
         clip-path: none;
+
+        #menu__button{
+            display:block;
+        }    
+
         nav {
-            display: none;
+            display: flex;
             a{
-                font-size: 1rem;
-            }       
-        }       
+                font-size: 0.8rem;
+            }     
+
+            form{
+                margin-left: 0.5rem;
+            }  
+        }   
+        nav.visible{
+            display: flex;
+            width: 100%;
+            background-color: black;
+        }    
+        .brand__container.visible{
+            width: 0;
+        }
     }
 
     main#main{
@@ -125,6 +146,12 @@
                     }
                 }
             }            
+        }
+
+        button#pokedex__button {
+            border-radius: 0.5rem;
+            width: 8rem;
+            padding: 0.5rem;
         }
 
     }

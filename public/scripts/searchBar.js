@@ -4,4 +4,8 @@ searchBtn.addEventListener("click", () => {
     [searchBtn, searchInput].forEach(element => {
         element.classList.toggle("searching");
     });
+    if(window.innerWidth < 450){
+        document.querySelector("nav").classList.toggle("visible");
+        document.querySelector("#header .brand__container").classList.toggle("visible");
+    }
 })
