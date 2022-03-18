@@ -1,0 +1,28 @@
+<div id="pokedex__grid">
+    <% pokedex.forEach(element => { %>
+        <%var image = element.sprites.other["official-artwork"].front_default%>
+        <div class="pokedex__card rounded bg__darkgray fluid" >
+            <% if (element.id < 10) { %>
+                <div class="pokemon__index text__color__lightblack bg__gray">00<%-element.id%></div>                         
+            <% } else if(element.id < 100) {%>
+                <div class="pokemon__index text__color__lightblack bg__gray">0<%-element.id%></div>
+            <%} else {%>
+                <div class="pokemon__index text__color__lightblack bg__gray"><%-element.id%></div>
+            <%}%>
+
+            <div class="pokedex__card__cover fluid bg__lightblack" style="background-image: url(<%=image%> );"></div>
+            
+            <div class="pokedex__card__info">
+                <h3 class="pokedex__card__info__name text__color__gray"><%=element.name%></h3>
+                <div class="pokedex__type__container">
+                    <% element.types.forEach(element => { %>
+                        <div class="pokedex__type rounded <%-element.type.name%> bg__lightblack">
+                            <p class="text__family__sigmar"><%-element.type.name%></p>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+        
+    <% }) %>
+</div>
