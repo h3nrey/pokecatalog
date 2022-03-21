@@ -10,7 +10,7 @@
             font-size: 1.8rem;
         }
     }
-    section#pokedex div#pokedex__container #pokedex__grid .pokedex__card .pokedex__card__info .pokedex__card__info__name{
+    #pokemon__grid .pokemon__card .pokemon__card__info .pokemon__card__info__name{
         font-size: 1.8rem;
     }
 }
@@ -32,7 +32,7 @@
         font-size: 1rem;
     }
 
-    section#pokedex div#pokedex__container #pokedex__grid{
+    #pokemon__grid{
         grid-template-columns: 1fr 1fr 1fr;
     }
 
@@ -55,7 +55,7 @@
         font-size: 1rem;
     }
 
-    section#pokedex div#pokedex__container #pokedex__grid{
+    #pokemon__grid{
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -117,6 +117,16 @@
             .starredPokemons__card__cover{
                 height: 65%;
             }
+
+            .starredPokemons__index__container{
+                .pokemon__index{          
+                    left: 62%;
+                    top: 9%;
+                    font-size: 1rem;
+        
+                }
+        
+            }
     
             .starredPokemons__info .starredPokemons__type__container .starredPokemons__type p {
                 font-size: 0.6rem;
@@ -127,26 +137,26 @@
 
 
     //pokedex
+    #pokemon__grid{
+        grid-template-columns: 1fr;
+
+        .pokemon__card {
+            
+            .pokemon__card__cover{
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            
+            .pokemon__card__info {
+
+                .pokemon__card__info__name{
+                    font-size: 1.8rem;
+                }
+            }
+        }            
+    }
     section#pokedex div#pokedex__container {
-        #pokedex__grid{
-            grid-template-columns: 1fr;
-
-            .pokedex__card {
-                
-                .pokedex__card__cover{
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-                
-                .pokedex__card__info {
-
-                    .pokedex__card__info__name{
-                        font-size: 1.8rem;
-                    }
-                }
-            }            
-        }
 
         button#pokedex__button {
             border-radius: 0.5rem;

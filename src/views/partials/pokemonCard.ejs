@@ -1,0 +1,17 @@
+<%var image = element.sprites.other["official-artwork"].front_default%>
+<div class="pokemon__card rounded bg__darkgray fluid" >
+    <%- include ("./pokemonIndex", {index:element.id})%> 
+
+    <div class="pokemon__card__cover fluid bg__lightblack" style="background-image: url(<%=image%> );"></div>
+    
+    <div class="pokemon__card__info">
+        <h3 class="pokemon__card__info__name text__color__gray"><%=element.name%></h3>
+        <div class="pokemon__type__container">
+            <% element.types.forEach(element => { %>
+                <div class="pokemon__type rounded <%-element.type.name%> bg__lightblack">
+                    <p class="text__family__sigmar"><%-element.type.name%></p>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>

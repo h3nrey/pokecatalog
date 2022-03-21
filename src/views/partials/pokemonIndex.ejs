@@ -1,0 +1,7 @@
+<% if (index < 10) { %>
+    <div class="pokemon__index text__color__lightblack bg__gray">00<%-index%></div>                         
+<% } else if(index < 100) {%>
+    <div class="pokemon__index text__color__lightblack bg__gray">0<%-index%></div>
+<%} else {%>
+    <div class="pokemon__index text__color__lightblack bg__gray"><%-index%></div>
+<%}%>

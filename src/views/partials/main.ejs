@@ -7,6 +7,9 @@
                 <div id="starredPokemons__carousel" class="fluid">
                     <% starredPokemons.forEach(element => { %>
                         <div class="starredPokemons__card fluid bg__gray">
+                            <div class="starredPokemons__index__container">
+                               <%-include("./pokemonIndex", {index:element.id})%> 
+                            </div>
                             <img src=<%-element.sprites.other["official-artwork"].front_default%> alt="" class="starredPokemons__card__cover bg__lightblack">
                             <div class="starredPokemons__info">
                                 <h3 class="starredPokemons__info__name text__color_gray"><%=element.name%></h3>
@@ -29,7 +32,11 @@
     <section id="pokedex">
         <div id="pokedex__container" class="bg__gray flex__container__center">
             <h2 class="section__legend">Pokedex</h2>
-            <%- include ("./pokemonGrid", {pokedex:pokedex}) %> 
+            <div id="pokemon__grid">
+                <% pokedex.forEach(pokemon => { %>
+                    <%- include ("./pokemonCard", {element:pokemon}) %>                 
+                <% }) %>
+            </div>
             <button class="bg__darkgray rounded text__family__sigmar text__color__gray borderless fluid" id="pokedex__button">Load more...</button>
         </div>
     </section>

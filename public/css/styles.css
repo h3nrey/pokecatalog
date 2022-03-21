@@ -103,6 +103,19 @@
   height: 100%;
 }
 
+.pokemon__index {
+  width: 3rem;
+  height: 1.5rem;
+  position: absolute;
+  z-index: 2;
+  top: 5%;
+  left: 70%;
+  text-align: center;
+  -webkit-clip-path: polygon(0 0, 90% 0, 100% 15%, 100% 100%, 12% 100%, 0 88%);
+          clip-path: polygon(0 0, 90% 0, 100% 15%, 100% 100%, 12% 100%, 0 88%);
+  font-size: 0.9rem;
+}
+
 #header {
   background-color: black;
   padding-top: 1rem;
@@ -266,6 +279,15 @@ main.flex__container__center h2.section__legend:hover {
 
 .starredPokemons__card:hover .starredPokemons__cover {
   background-size: 110%;
+}
+
+.starredPokemons__card .starredPokemons__index__container .pokemon__index {
+  color: #dfdfdf;
+  background-color: rgba(248, 248, 255, 0);
+  font-weight: 700;
+  left: 70%;
+  top: 9%;
+  font-size: 1.2rem;
 }
 
 .starredPokemons__card .starredPokemons__card__cover {
@@ -573,6 +595,7 @@ section#pokedex div#pokedex__container button#pokedex__button.disabled {
   border-radius: 1rem;
   cursor: pointer;
   overflow: hidden;
+  position: relative;
 }
 
 #pokemon__grid .pokemon__card:hover {
@@ -698,7 +721,7 @@ footer#footer #social a i:hover {
   .brand__container h1.brand__name {
     font-size: 1.8rem;
   }
-  section#pokedex div#pokedex__container #pokedex__grid .pokedex__card .pokedex__card__info .pokedex__card__info__name {
+  #pokemon__grid .pokemon__card .pokemon__card__info .pokemon__card__info__name {
     font-size: 1.8rem;
   }
 }
@@ -715,7 +738,7 @@ footer#footer #social a i:hover {
   #header nav a {
     font-size: 1rem;
   }
-  section#pokedex div#pokedex__container #pokedex__grid {
+  #pokemon__grid {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
   }
@@ -733,7 +756,7 @@ footer#footer #social a i:hover {
   #header nav a {
     font-size: 1rem;
   }
-  section#pokedex div#pokedex__container #pokedex__grid {
+  #pokemon__grid {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
@@ -792,19 +815,24 @@ footer#footer #social a i:hover {
   #starredPokemons .starredPokemons__card .starredPokemons__card__cover {
     height: 65%;
   }
+  #starredPokemons .starredPokemons__card .starredPokemons__index__container .pokemon__index {
+    left: 62%;
+    top: 9%;
+    font-size: 1rem;
+  }
   #starredPokemons .starredPokemons__card .starredPokemons__info .starredPokemons__type__container .starredPokemons__type p {
     font-size: 0.6rem;
   }
-  section#pokedex div#pokedex__container #pokedex__grid {
+  #pokemon__grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  section#pokedex div#pokedex__container #pokedex__grid .pokedex__card .pokedex__card__cover {
+  #pokemon__grid .pokemon__card .pokemon__card__cover {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
-  section#pokedex div#pokedex__container #pokedex__grid .pokedex__card .pokedex__card__info .pokedex__card__info__name {
+  #pokemon__grid .pokemon__card .pokemon__card__info .pokemon__card__info__name {
     font-size: 1.8rem;
   }
   section#pokedex div#pokedex__container button#pokedex__button {
