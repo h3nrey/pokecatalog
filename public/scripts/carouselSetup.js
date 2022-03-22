@@ -12,6 +12,7 @@ let rotateIndex = 0;
 
 (function () {
   cells[0].classList.add("card__visible");
+  
 }())
 
 function rotateCarousel() {
@@ -51,17 +52,16 @@ nextButton.addEventListener( 'click', function() {
 function changeCarousel() {
   cellCount = 9;
   theta = 360 / cellCount;
-  var cellSize = isHorizontal ? cellWidth : cellHeight;
+  var cellSize = cells[0].offsetWidth;
+  console.log(cellSize);
   radius = Math.round( ( cellSize / 2) / Math.tan( Math.PI / cellCount ) );
   for ( var i=0; i < cells.length; i++ ) {
     var cell = cells[i];
     if ( i < cellCount ) {
       // visible cell
-      // cell.style.opacity = 1;
       var cellAngle = theta * i;
       cell.style.transform = rotateFn + '(' + cellAngle + 'deg) translateZ(' + radius + 'px) translateY(-50%)';
-      // cell.style.transform = `${rotateFn + cellAngle}deg, translateZ(${radius}px) translateY(-50%)`;
-      // carousel.style.transform = rotateFn + '(' + cellAngle + 'deg) translateY(-50%)';
+      console.log(`rotatefn:${rotateFn}, cellangle(${cellAngle} = theta${theta} * i${i}, radius:${radius})`);
     } else {
       // hidden cell
       cell.style.opacity = 0;
@@ -73,21 +73,3 @@ function changeCarousel() {
 }
 
 changeCarousel();
-
-// var orientationRadios = document.querySelectorAll('input[name="orientation"]');
-// ( function() {
-//   for ( var i=0; i < orientationRadios.length; i++ ) {
-//     var radio = orientationRadios[i];
-//     radio.addEventListener( 'change', onOrientationChange );
-//   }
-// })();
-
-// function onOrientationChange() {
-//   var checkedRadio = document.querySelector('input[name="orientation"]:checked');
-//   isHorizontal = checkedRadio.value == 'horizontal';
-//   rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
-//   changeCarousel();
-// }
-
-// // set initials
-// onOrientationChange();

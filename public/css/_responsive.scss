@@ -175,7 +175,19 @@
         #license__container{
             text-align: center;
         }
-    }
+    }   
+}
 
-        
+@media (max-width: 360px) {
+    .brand__container{
+        img{
+            width: 1.4rem;
+            height: 1.4rem;
+            margin-right: 0.3rem;
+        }
+    
+        h1.brand__name {
+            font-size: 1rem;
+        }
+    }
 }

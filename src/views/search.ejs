@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <%-include("./partials/head.ejs")%>
-<body class="bg__lightblack body__container">
+<body class="bg__gray body__container">
     <%-include("./partials/header.ejs")%>
     <main id="search__main">
         <section id="pokemon" class="height__full">
             <div id="pokemon__container" class="bg__gray flex__container__center height__full">
-                <h2 class="section__legend">Resultados</h2>
+                <h2 class="section__legend margin__top">Resultados</h2>
                 <% if (pokemon != null) { %>
                     <div id="pokemon__grid">
                         <%- include ("./partials/pokemonCard", {element:pokemon}) %> 
