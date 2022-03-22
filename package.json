@@ -6,9 +6,12 @@
     "scripts": {
         "start": "nodemon server.js"
     },
+    "engines": {
+        "node": "16.14.2"
+    },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Pedro Novaes",
+    "license": "MIT",
     "dependencies": {
         "axios": "^0.26.0",
         "ejs": "^3.1.6",
