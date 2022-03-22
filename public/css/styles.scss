@@ -1,0 +1,37 @@
+$black: #000000;
+$lightBlack: #1a191d;
+$lightGray: #dfdfdf;
+$gray: #9f9f9f;
+$darkGray: #606060;
+
+//types Color
+$fire: #fd9218;
+$grass: #2ce287;
+$electric: #f5e020;
+$water: #33b9ee;
+$ice: #90dfff;
+$ground: #7e4e1e;
+$rock: #493913;
+$fairy: #f9d5ff;
+$poison: #481455;
+$bug: #A8B820;
+$dragon: #69316e;
+$psychic: #c437d6;
+$flying: #dde8fd;
+$fighting: #e03517;
+$normal: #A8A878;
+$ghost: #705898;
+$dark: #383227;
+$steel: #a8a8a8;
+
+//imports
+@import "global";
+@import "usualClasses";
+@import "header";
+@import "main";
+@import "pokedex";
+@import "types";
+@import "pokemonGrid";
+@import "search";
+@import "footer";
+@import "responsive";

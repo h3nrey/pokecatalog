@@ -1,0 +1,137 @@
+main.flex__container__center{
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2rem;
+    justify-content: start;
+
+    h2.section__legend{
+        &:hover{
+            color: $gray;
+        }
+    }
+}
+
+#starredPokemons{
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    .starredPokemons__buttons{
+        text-align: center;
+        font-size: 6.25rem;
+        cursor:pointer;
+        line-height: 50%;
+        background-color: rgba(240, 248, 255, 0);
+        z-index: 10;
+
+        &:hover{
+            transform: scale(1.1);
+            text-shadow: -10px 0 10px $black
+        }
+    }
+}
+
+#starredPokemons__carousel__container {
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+    position: relative;
+    
+}
+#starredPokemons__carousel{
+    // overflow-x: visible;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translateZ(-325px);
+    transform-style: preserve-3d;
+}
+
+.starredPokemons__card{
+    filter: grayscale(0.8);
+    position: absolute;
+    width: 14.8rem;
+    height: 20rem;
+    left: 10px;
+    top: 50%;
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    margin: 0 1rem;
+    clip-path: polygon(85% 0, 100% 10%, 100% 100%, 0 100%, 0 0);
+    cursor: pointer;
+    transition: all 400ms;
+
+    &:hover{
+        transform: scale(1.1);
+        .starredPokemons__cover{
+            background-size: 110%;
+        }
+    
+    }
+
+    .starredPokemons__index__container{
+        .pokemon__index{
+            color: $lightGray;
+            background-color: rgba(248, 248, 255, 0);
+            font-weight: 700;            
+            left: 70%;
+            top: 9%;
+            font-size: 1.2rem;
+
+        }
+
+    }
+
+    .starredPokemons__card__cover{
+        width: 100%;
+        height: 70%;
+        clip-path: polygon(88% 0, 100% 11%, 100% 100%, 0 100%, 0 0);
+        &:hover{
+            background-size: 110%;
+        }
+    }
+
+    .starredPokemons__info{
+        margin-top: 0.5rem;
+
+        h2.starredPokemons__info__name{
+
+        }
+
+        .starredPokemons__type__container{
+            margin-top: 0.3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.5rem;
+
+            .starredPokemons__type{
+                padding: 0.3rem;
+                border-radius: 0.4rem;
+
+                p{
+                    font-weight: 300;
+                    font-size: 0.8rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.starredPokemons__card.card__visible{
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+.starred-pokemons-card:nth-child(1) { transform: rotateY(  0deg) translateZ(325px); }
+.starred-pokemons-card:nth-child(2) { transform: rotateY( 40deg) translateZ(325px); }
+.starred-pokemons-card:nth-child(3) { transform: rotateY( 80deg) translateZ(325px); }
+.starred-pokemons-card:nth-child(4) { transform: rotateY(120deg) translateZ(325px); }
+.starred-pokemons-card:nth-child(5) { transform: rotateY(160deg) translateZ(325px); }
+.starred-pokemons-card:nth-child(6) { transform: rotateY(200deg) translateZ(325px); }
+.starred-pokemons-card:nth-child(7) { transform: rotateY(240deg) translateZ(325px); }
+.starred-pokemons-card:nth-child(8) { transform: rotateY(280deg) translateZ(325px); }
+.starred-pokemons-card:nth-child(9) { transform: rotateY(320deg) translateZ(325px); }
+
+
+

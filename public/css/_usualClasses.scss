@@ -1,0 +1,101 @@
+//containers
+.container{
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.flex__container__center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+//text 
+.text__family__sigmar{
+    font-family: "sigmar one", sans-serif;
+}
+
+
+.text__color__lightblack {
+    color: $lightBlack;
+}
+  
+.text__color__darkgray{
+    color: $darkGray;
+}
+
+.text__color__gray {
+    color: $gray;
+
+    &:hover{
+        color: $lightGray;
+    }
+}
+
+.text__color__lightgray {
+    color: $lightGray;
+}
+
+//backgrounds
+.bg__lightblack{
+    background-color: $lightBlack;
+}
+
+.bg__darkgray{
+    background-color: $darkGray;
+}
+.bg__gray{
+    background-color: $gray;
+}
+.bg__lightgray{
+    background-color: $lightGray;
+}
+
+//fluid
+.fluid{
+    transition: all 400ms;
+}
+
+
+//borderless
+.borderless{
+    border: 0;
+}
+
+//rouded
+.rounded{
+    border-radius: 1rem;
+}
+
+//body container
+.body__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+
+//height & width
+.height__full {
+    height: 100%;
+}
+
+
+//margin 
+.margin__top{
+    margin-top: 2rem;
+}
+
+.pokemon__index {
+    width: 3rem;
+    height: 1.5rem;
+    position: absolute;
+    z-index: 2;
+    top: 5%;
+    left: 70%;
+    text-align: center;
+    clip-path: polygon(0 0, 90% 0, 100% 15%, 100% 100%, 12% 100%, 0 88%);
+    font-size: 0.9rem;
+}

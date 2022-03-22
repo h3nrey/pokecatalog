@@ -1,0 +1,44 @@
+<main class="flex__container__center bg__lightblack" id="main">
+    <section id="starredPokemons" class=" container">        
+        <h2 class="section__legend text__color__gray">Featured pokemons</h2>
+        <div class="flex__container__center">
+            <button class="starredPokemons__buttons borderless text__color__gray fluid" id="button__previous"> <i class="fa-solid fa-chevron-left"></i></button>
+            <div id="starredPokemons__carousel__container">
+                <div id="starredPokemons__carousel" class="fluid">
+                    <% starredPokemons.forEach(element => { %>
+                        <div class="starredPokemons__card fluid bg__gray">
+                            <div class="starredPokemons__index__container">
+                               <%-include("./pokemonIndex", {index:element.id})%> 
+                            </div>
+                            <img src=<%-element.sprites.other["official-artwork"].front_default%> alt="" class="starredPokemons__card__cover bg__lightblack">
+                            <div class="starredPokemons__info">
+                                <h3 class="starredPokemons__info__name text__color_gray"><%=element.name%></h3>
+                                <div class="starredPokemons__type__container">
+                                    <% element.types.forEach(element => { %>
+                                        <div class="starredPokemons__type <%-element.type.name%> bg__lightblack">
+                                            <p class="text__family__sigmar"><%-element.type.name%></p>
+                                        </div>
+                                    <% }) %>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+            
+            </div>
+            <button class="starredPokemons__buttons borderless text__color__gray fluid" id="button__next"> <i class="fa-solid fa-chevron-right"></i> </button>
+        </div>
+    </section>
+    <section id="pokedex">
+        <div id="pokedex__container" class="bg__gray flex__container__center">
+            <h2 class="section__legend">Pokedex</h2>
+            <div id="pokemon__grid">
+                <% pokedex.forEach(pokemon => { %>
+                    <%- include ("./pokemonCard", {element:pokemon}) %>                 
+                <% }) %>
+            </div>
+            <button class="bg__darkgray rounded text__family__sigmar text__color__gray borderless fluid" id="pokedex__button">Load more...</button>
+        </div>
+    </section>
+
+</main>
