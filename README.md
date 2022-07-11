@@ -1,4 +1,4 @@
-# **GhibliCinema**
+# **POKECatalog**
 ![](ReadmeAssets/home.png)
 
 ![](ReadmeAssets/pokedex.png)
