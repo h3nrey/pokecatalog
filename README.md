@@ -1,4 +1,4 @@
-# **POKECatalog**
+# **POKECATALOG**
 ![](ReadmeAssets/home.png)
 
 ![](ReadmeAssets/pokedex.png)
